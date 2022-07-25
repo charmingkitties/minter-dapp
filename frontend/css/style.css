@@ -6,13 +6,13 @@
 
 :root {
   --font-primary: 'Pacifico', cursive;
-  --font-secondary: 'Permanent Marker', cursive;
-  --font-code: 'Raleway', sans-serif;
+  --font-secondary: 'Raleway', sans-serif;
+  --font-code: 'Permanent Marker', cursive;
   --bg-color: #75a5ff;
   --bg-color-transparent: #00163f80;
   --font-color: #ffffff;
   --btn-bg-color: #ffffff;
-  --accent-color: #07c737;
+  --accent-color: #4442d1;
   --header-shadow: var(--accent-color) 0px 0px 5px;
   --card-shadow: var(--accent-color) 0px 0px 20px;
 }
