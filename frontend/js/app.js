@@ -93,7 +93,7 @@ const updateConnectStatus = async () => {
           onboardButton.disabled = true;
           window.address = accts[0];
           accounts = accts;
-          window.contract = new web3.eth.Contract(abi, contractAddress);
+          window.contract = new web3.eth.Contract(abi,contractAddress);
           loadInfo();
         });
     };
