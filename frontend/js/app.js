@@ -71,7 +71,7 @@ const updateConnectStatus = async () => {
     notConnected.classList.add('hidden');
     // SHOW SPINNER
     spinner.classList.remove('hidden');
-    window.contract = new web3.eth.Contract(abi, contractAddress);
+    window.contract = new web3.eth.Contract(abi,contractAddress);
     loadInfo();
   } else {
     onboardButton.innerText = "Connect MetaMask!";
