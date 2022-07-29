@@ -1,9 +1,9 @@
 const contractAddress = "0xeFb48861fED043B642a41Ad3b5cF859cb81aeb64"; // Replace with your own contract address
 const chain = 'rinkeby'; // rinkeby, polygon, or ethereum
 
-const welcome_h1 = "Welcome to the Blissy Kitties NFT Project!";
+const welcome_h1 = "Welcome to the Blissy Kitties NFT Minting Page!";
 const welcome_h2 = "Connect to MetaMask to Get Started";
-const welcome_p = 'The Blissy Kitties NFT Project is a decentralized, open-source project that aims to demonstrate how to develope and launch your own NFT Collection. Follow step by step on the <a href="https://youtube.com/codestackr"  target="_blank" rel="noopener noreferrer">codeSTACKr</a> YouTube channel.';
+const welcome_p = 'Welcome to the Blissy Kitties, a centralized NFT Project that brings the cutest, coolest and most charismatic cats to the Metaverse. More than normal kitties, these meowy friends are very special and spread love wherever they go. Together, they make up a unique NFT Collection that lives in the ETH blockchain and each kitty is one-of-a-kind and they cannot be replicated or destroyed. Mint your NFT now! Visit our <a href="https://blissykitties.com"  target="_blank" rel="noopener noreferrer">main page</a> to learn more about our project.';
 const h1_presale_coming_soon = "";
 const h1_presale_mint = "";
 const h1_public_mint = "Public Minting Open!";
