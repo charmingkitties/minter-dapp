@@ -21,7 +21,7 @@ const button_presale_already_minted = "Join The Community";
 const button_public_mint = "Mint Your NFT";
 const mint_failed = "Minting failed.😢 Please try again.";
 
-const abi = [  {
+[  {
    "inputs": [
      {
        "components": [
