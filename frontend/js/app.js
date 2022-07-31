@@ -156,8 +156,10 @@ async function checkChain() {
 
 async function loadInfo() {
   window.info = await window.contract.methods.getInfo().call();
+  const total_supply = await window.contract.methods.totalSupply().call();
   const publicMintActive = await contract.methods.mintingActive().call();
   const presaleMintActive = await contract.methods.presaleActive().call();
+  const hasBalance = await contract.methods.balanceOf(address).call();
   const mainHeading = document.getElementById("mainHeading");
   const subHeading = document.getElementById("subHeading");
   const mainText = document.getElementById("mainText");
@@ -168,12 +170,27 @@ async function loadInfo() {
 
   let startTime = "";
   if (publicMintActive) {
-    mainHeading.innerText = h1_public_mint;
-    mainText.innerText = p_public_mint;
-    actionButton.classList.add('hidden');
-    mintButton.innerText = button_public_mint;
-    mintContainer.classList.remove('hidden');
-    setTotalPrice();
+    if(total_supply === info.deploymentConfig.maxSupply) {
+      mainHeading.innerText = "Secondary Sales Open!!";
+      mainText.innerHTML = "All codeSTACKr Token's have been minted. 🎉<br>Check OpenSea for secondary sales.";
+      actionButton.classList.remove('hidden');
+      actionButton.innerText = "View on OpenSea";
+      actionButton.href = "https://opensea.io/collection/codestackr-token";
+      mintContainer.classList.add('hidden');
+    } else if(hasBalance === '0') {
+      mainHeading.innerText = h1_public_mint;
+      mainText.innerText = p_public_mint;
+      actionButton.classList.add('hidden');
+      mintButton.innerText = button_public_mint;
+      mintContainer.classList.remove('hidden');
+      setTotalPrice();
+    } else {
+      mainHeading.innerText = 'You Own A codeSTACKr Token!!';
+      mainText.innerText = 'Thank you for your support!';
+      actionButton.classList.remove('hidden');
+      mintButton.innerText = button_public_mint;
+      mintContainer.classList.add('hidden');
+    }
   } else if (presaleMintActive) {
     startTime = window.info.runtimeConfig.publicMintStart;
     mainHeading.innerText = h1_presale_mint;
@@ -236,15 +253,15 @@ async function loadInfo() {
   
   pricePerMint.innerText = `${price} ${priceType}`;
   maxPerMint.innerText = `${info.deploymentConfig.tokensPerMint}`;
-  totalSupply.innerText = `${info.deploymentConfig.maxSupply}`;
+  totalSupply.innerText = `${total_supply}/${info.deploymentConfig.maxSupply}`;
   mintInput.setAttribute("max", info.deploymentConfig.tokensPerMint);
 
   // MINT INPUT
   const mintIncrement = document.getElementById("mintIncrement");
   const mintDecrement = document.getElementById("mintDecrement");
   const setQtyMax = document.getElementById("setQtyMax");
-  const min = mintInput.attributes.min.value || null;
-  const max = mintInput.attributes.max.value || null;
+  const min = mintInput.attributes.min.value || false;
+  const max = mintInput.attributes.max.value || false;
   mintDecrement.onclick = () => {
     let value = parseInt(mintInput.value) - 1 || 1;
     if(!min || value >= min) {
@@ -315,10 +332,7 @@ async function mint() {
     try {
       const mintTransaction = await contract.methods
         .mint(amount)
-        .send({ from: window.address, value: value.toString(),
-        maxpriorityfeepergas: null,
-      maxfeepergas: null,
-     });
+        .send({ from: window.address, value: value.toString() });
       if(mintTransaction) {
         if(chain === 'rinkeby') {
           const url = `https://rinkeby.etherscan.io/tx/${mintTransaction.transactionHash}`;
