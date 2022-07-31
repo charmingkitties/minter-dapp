@@ -243,8 +243,8 @@ async function loadInfo() {
   const mintIncrement = document.getElementById("mintIncrement");
   const mintDecrement = document.getElementById("mintDecrement");
   const setQtyMax = document.getElementById("setQtyMax");
-  const min = mintInput.attributes.min.value || false;
-  const max = mintInput.attributes.max.value || false;
+  const min = mintInput.attributes.min.value || null;
+  const max = mintInput.attributes.max.value || null;
   mintDecrement.onclick = () => {
     let value = parseInt(mintInput.value) - 1 || 1;
     if(!min || value >= min) {
@@ -315,7 +315,10 @@ async function mint() {
     try {
       const mintTransaction = await contract.methods
         .mint(amount)
-        .send({ from: window.address, value: value.toString() });
+        .send({ from: window.address, value: value.toString(),
+        maxpriorityfeepergas: null,
+      maxfeepergas: null,
+     });
       if(mintTransaction) {
         if(chain === 'rinkeby') {
           const url = `https://rinkeby.etherscan.io/tx/${mintTransaction.transactionHash}`;
