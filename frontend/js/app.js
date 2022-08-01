@@ -281,11 +281,11 @@ function setTotalPrice() {
   const mintButton = document.getElementById("mintButton");
   if(mintInputValue < 1 || mintInputValue > info.deploymentConfig.tokensPerMint) {
     totalPrice.innerText = 'INVALID QUANTITY';
-    mintButton.disabled = true;
-    mintInput.disabled = true;
+    mintButton.disabled = false;
+    mintInput.disabled = false;
     return;
   }
-  const totalPriceWei = BigInt(info.deploymentConfig,14000000000000000) * BigInt(mintInputValue);
+  const totalPriceWei = BigInt(info.deploymentConfig.mintPrice) * BigInt(mintInputValue);
   
   let priceType = '';
   if(chain === 'rinkeby' || chain === 'ethereum') {
