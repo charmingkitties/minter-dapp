@@ -1,5 +1,5 @@
-const contractAddress = "0x0c49276623149c4f14bC5e2AC1c666ae77cAc61d"; // Replace with your own contract address
-const chain = 'ethereum'; // rinkeby, polygon, or ethereum
+const contractAddress = "0x419D2bD90AbA22b6Fe51b16A2d9f968a4BD1E0f8"; // Replace with your own contract address
+const chain = 'rinkeby'; // rinkeby, polygon, or ethereum
 
 const welcome_h1 = "Welcome to the Blissy Kitties NFT Minting Page!";
 const welcome_h2 = "Connect to MetaMask to Get Started";
