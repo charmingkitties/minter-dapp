@@ -2,8 +2,8 @@ const contractAddress = "0x0c49276623149c4f14bc5e2ac1c666ae77cac61d"; // Replace
 const chain = 'ethereum'; // rinkeby, polygon, or ethereum
 
 const welcome_h1 = "Welcome to the Blissy Kitties NFT Minting Page!";
-const welcome_h2 = "Connect to MetaMask to Get Started";
-const welcome_p = 'Welcome to the Blissy Kitties, a NFT Project that brings the cutest, coolest and most charismatic cats to the Metaverse.';
+const welcome_h2 = "Connect to MetaMask to Get Started 🦊";
+const welcome_p = 'The cutest, coolest and most charismatic cats from the streets to your wallet.';
 const h1_presale_coming_soon = "..";
 const h1_presale_mint = "..";
 const h1_public_mint = "Public Minting Open!";
