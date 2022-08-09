@@ -333,6 +333,34 @@ section {
   margin: 1rem 0;
 }
 
+
+/* TEAM */
+
+.team {
+  background: var(--accent-color);
+  text-align: center;
+  padding: 3rem 0;
+}
+.team h1 {
+  color: var(--bg-color);
+  text-shadow: 2px 2px 0 var(--font-color);
+  font-style: italic;
+  margin: 2rem 0;
+  font-size: 3.5rem;
+}
+.team h2 {
+  color: var(--bg-color);
+  margin-top: 2rem;
+  font-size: 2rem;
+}
+.team .row {
+  display: flex;
+}
+.team .row img {
+  width: 55%;
+  padding: 0 2rem;
+}
+
 /* SLIDDER */
 
 .splide {
