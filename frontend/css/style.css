@@ -453,9 +453,9 @@ section {
   color: var(--font-color);
 }
 
-/* ROADMAP */
+/* STORY */
 
-.roadmap {
+.story {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -569,14 +569,14 @@ section {
 .row section .bottom a:hover {
   transform: scale(0.97);
 }
-.roadmap-v2 {
+.story-v2 {
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 2rem 0;
   z-index: 1;
 }
-.roadmap-v2 p {
+.story-v2 p {
   background: var(--accent-color);
   color: #fff;
   font-size: 1.5rem;
