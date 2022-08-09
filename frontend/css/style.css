@@ -351,6 +351,15 @@ section {
   width: 100%;
 }
 
+/* FOOTER */
+footer {
+  text-align: center;
+  font-weight: bold;
+  padding: 2rem 0;
+  background: var(--accent-color);
+  color: var(--bg-color);
+}
+
 /* SPINNER */
 .dot-spin {
   position: absolute;
