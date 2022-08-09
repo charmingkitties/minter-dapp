@@ -3,10 +3,10 @@ const chain = 'ethereum'; // rinkeby, polygon, or ethereum
 
 const welcome_h1 = "Welcome to the Blissy Kitties NFT dApp!";
 const welcome_h2 = "Connect to MetaMask to Get Started 🦊";
-const welcome_p = 'Here you can mint the cutest, coolest and most charismatic cats from the streets to your wallet on ETH blockchain.';
+const welcome_p = 'Welcome to this aMEOWzing collection. Here you can mint the cutest, coolest and most charismatic cats from the streets to your wallet on ETH blockchain.';
 const h1_presale_coming_soon = "..";
 const h1_presale_mint = "..";
-const h1_public_mint = "Public Minting Open!";
+const h1_public_mint = "Public Minting Open!🐈";
 const h2_presale_coming_soon = "";
 const h2_presale_mint = "";
 const p_presale_coming_soon = "";

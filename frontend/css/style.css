@@ -25,9 +25,9 @@
 
 body {
   background-color: var(--bg-color);
-  display: flex;
-  flex-flow: column;
-  height: 100vh;
+ /* display: flex;
+  flex-flow: column; */
+  min-height: 100vh;
   color: var(--font-color);
   font-family: var(--font-primary);
 }
@@ -39,7 +39,19 @@ body {
   margin: 0 auto;
   padding: 1rem 2rem;
   justify-content: center;
-  overflow: visible;
+  overflow: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: var(--font-color);
+}
+
+h1 {
+  text-shadow: 2px 2px 0 var(--accent-color);
+  font-style: italic;
+  margin: 2rem 0;
+  font-size: 2.5rem;
 }
 
 /* HEADER */
