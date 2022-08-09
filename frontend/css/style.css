@@ -7,7 +7,7 @@
 :root {
   --font-primary: 'Fredoka One', cursive;
   --font-secondary: 'Raleway', sans-serif;
-  --font-code: 'Prompt', sans-serif
+  --font-code: 'Prompt', sans-serif;
   --bg-color: #001844;
   --bg-color-transparent: #6b89be80;
   --font-color: #ffffff;
@@ -35,11 +35,11 @@ body {
 .container {
   display: flex;
   flex-direction: column;
-  max-width: 1300px;
+  max-width: 960px;
   margin: 0 auto;
   padding: 1rem 2rem;
   justify-content: center;
-  overflow: visible;
+  overflow: auto;
 }
 
 /* HEADER */
