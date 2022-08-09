@@ -351,22 +351,22 @@ section {
   width: 100%;
 }
 
-/* FAQ */
+/* ROADMAP */
 
 
-.faq {
+.roadmap {
   padding-bottom: 3rem;
 }
 
-.faq ul li i:before, .faq ul li i:after, .faq p {
+.roadmap ul li i:before, .roadmap ul li i:after, .roadmap p {
   transition: all 0.25s ease-in-out;
 }
 
-.faq h1{
+.roadmap h1{
   text-align: center;
 }
 
-.faq h2 {
+.roadmap h2 {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   -webkit-touch-callout: none;
   -webkit-user-select: none;
@@ -376,7 +376,7 @@ section {
   user-select: none;
 }
 
-.faq p {
+.roadmap p {
   position: relative;
   font-size: 1.1rem;
   line-height: 1.8;
@@ -389,47 +389,47 @@ section {
   z-index: 2;
 }
 
-.faq p video {
+.roadmap p video {
   width: 100%;
   padding: 0 2rem;
 }
 
-.faq a {
+.roadmap a {
   color: var(--btn-bg-color);
   font-weight: 700;
 }
 
-.faq ul {
+.roadmap ul {
   list-style: none;
 }
-.faq ul li {
+.roadmap ul li {
   position: relative;
   padding: 1rem;
   border-top: 1px dotted var(--accent-color);
 }
-.faq ul li:last-of-type {
+.roadmap ul li:last-of-type {
   padding-bottom: 0;
 }
-.faq ul li i {
+.roadmap ul li i {
   position: absolute;
   transform: translate(-1rem, 0);
   margin-top: 16px;
   right: 0;
 }
-.faq ul li i:before, .faq ul li i:after {
+.roadmap ul li i:before, .roadmap ul li i:after {
   content: "";
   position: absolute;
   background-color: var(--accent-color);
   width: 3px;
   height: 9px;
 }
-.faq ul li i:before {
+.roadmap ul li i:before {
   transform: translate(-2px, 0) rotate(45deg);
 }
-.faq ul li i:after {
+.roadmap ul li i:after {
   transform: translate(2px, 0) rotate(-45deg);
 }
-.faq ul li input[type=checkbox] {
+.roadmap ul li input[type=checkbox] {
   position: absolute;
   cursor: pointer;
   width: 100%;
@@ -437,16 +437,16 @@ section {
   z-index: 1;
   opacity: 0;
 }
-.faq ul li input[type=checkbox]:checked ~ p {
+.roadmap ul li input[type=checkbox]:checked ~ p {
   margin-top: 0;
   max-height: 0;
   opacity: 0;
   transform: translate(0, 50%);
 }
-.faq ul li input[type=checkbox]:checked ~ i:before {
+.roadmap ul li input[type=checkbox]:checked ~ i:before {
   transform: translate(2px, 0) rotate(45deg);
 }
-.faq ul li input[type=checkbox]:checked ~ i:after {
+.roadmap ul li input[type=checkbox]:checked ~ i:after {
   transform: translate(-2px, 0) rotate(-45deg);
 }
 
