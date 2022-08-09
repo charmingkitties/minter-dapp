@@ -73,6 +73,13 @@ header .container {
   align-items: center;
 }
 
+.main-wrapper {
+  min-height: calc(100vh - 90px);
+  display: flex;
+  align-items: center;
+}
+
+
 /* NOT CONNECTED */
 .not-connected {
   align-items: center;
@@ -104,7 +111,7 @@ header .container {
 
 .not-connected a {
   text-decoration: none;
-  color: var(--accent-color);
+  color: var(--bg-color);
   font-size: 1.5rem;
   font-weight: bold;
 }
