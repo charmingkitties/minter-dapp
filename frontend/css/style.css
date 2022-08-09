@@ -334,29 +334,29 @@ section {
 }
 
 
-/* TEAM */
+/* STORY */
 
-.team {
+.story {
   background: var(--accent-color);
   text-align: center;
   padding: 3rem 0;
 }
-.team h1 {
+.story h1 {
   color: var(--bg-color);
   text-shadow: 2px 2px 0 var(--font-color);
   font-style: italic;
   margin: 2rem 0;
   font-size: 3.5rem;
 }
-.team h2 {
+.story h2 {
   color: var(--bg-color);
   margin-top: 2rem;
   font-size: 2rem;
 }
-.team .row {
+.story .row {
   display: flex;
 }
-.team .row img {
+.story .row img {
   width: 55%;
   padding: 0 2rem;
 }
@@ -498,19 +498,36 @@ footer {
 /* MEDIA QUERIES */
 
 @media screen and (max-width: 768px) {
+  .logo img {
+    width: 25vw;
+    margin-right: 10vw;
+  }
   .menu {
     gap: 1rem;
   }
+  .menu img {
+    width: 5vw;
+  }
   .wallet-btn {
     margin-left: 0;
-    padding: 0.5rem 1rem;
+    padding: 0.25rem 0.5rem;
     max-width: 8rem;
+    font-size: 0.75rem;
   }
   .not-connected {
     background-color: var(--bg-color-transparent);
     border-radius: 5px;
     padding: 2rem;
     margin: 0 auto;
+  }
+  .not-connected h1 {
+    font-size: 1.5rem;
+  }
+  .not-connected h2 {
+    font-size: 1.0rem;
+  }
+  .not-connected p, .not-connected a {
+    font-size: 1rem;
   }
   .countdown ul {
     display: grid;
@@ -542,6 +559,93 @@ footer {
     padding: 1rem;
     font-size: 13px;
   }
+.collaboration {
+  padding: 2rem 0;
+}
+.collaboration h1 {
+  font-size: 2.5rem;
+}
+.collaboration p {
+  font-size: 1rem;
+}
+.collaboration .flex {
+  flex-direction: column;
+}
+.collaboration span img {
+  width: 60vw;
+  margin-left: 0;
+}
+.collabs {
+  flex-direction: column;
+}
+.collabs .collab {
+  margin: 3rem 0;
+}
+.splide-2 .splide__slide img {
+  width: 33.3vw;
+}
+.decode {
+  padding: 2rem 0;
+}
+.decode h1 {
+  font-size: 1.5rem;
+}
+.decode h2 {
+  font-size: 1.0rem;
+}
+.decode p {
+  font-size: 1.0rem;
+}
+.decode span {
+  float: none;
+  display: block;
+}
+.decode span img {
+  width: 100%;
+  object-fit: cover;
+  margin-right: 0;
+}
+.roadmap {
+  margin-top: 1rem;
+}
+.wrapper {
+  margin: 1rem auto;
+}
+.hero-btn {
+  font-size: 1rem;
+}
+h1 {
+  font-size: 1.5rem;
+}
+h2 {
+  font-size: 1.0rem;
+}
+.story {
+  padding: 2rem 0;
+}
+.story h1 {
+  font-size: 1.5rem;
+}
+.story .row {
+  flex-direction: column;
+  gap: 2rem;
+}
+.story h2 {
+  color: var(--bg-color);
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-size: 1.0rem;
+}
+.roadmap h1 {
+  font-size: 1.5rem;
+}
+.roadmap h2 {
+  width: 90%;
+  font-size: 1.2rem;
+}
+.roadmap p {
+  font-size: 1rem;
+}
 }
 
 /* UTILITIES */
