@@ -36,7 +36,7 @@ body {
   display: flex;
   flex-direction: column;
   max-width: 960px;
-  margin: 0 auto;
+  margin: 1300px;
   padding: 1rem 2rem;
   justify-content: center;
   overflow: visible;
