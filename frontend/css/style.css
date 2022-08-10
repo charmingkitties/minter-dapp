@@ -737,6 +737,33 @@ section {
   transform: translate(-2px, 0) rotate(-45deg);
 }
 
+/* BEHIND THE PROJECT */
+
+.behind the project {
+  background: var(--accent-color);
+  text-align: center;
+  padding: 3rem 0;
+}
+.behind the project h1 {
+  color: var(--bg-color);
+  text-shadow: 2px 2px 0 var(--font-color);
+  font-style: italic;
+  margin: 2rem 0;
+  font-size: 3.5rem;
+}
+.behind the project h2 {
+  color: var(--bg-color);
+  margin-top: 2rem;
+  font-size: 2rem;
+}
+.behind the project .row {
+  display: flex;
+}
+.behind the project .row img {
+  width: 55%;
+  padding: 0 2rem;
+}
+
 /* FOOTER */
 footer {
   text-align: center;
