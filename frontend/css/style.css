@@ -453,9 +453,9 @@ section {
   color: var(--font-color);
 }
 
-/* STORY */
+/* ROADMAP */
 
-.story {
+.roadmap {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -569,14 +569,14 @@ section {
 .row section .bottom a:hover {
   transform: scale(0.97);
 }
-.story-v2 {
+.roadmap-v2 {
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 2rem 0;
   z-index: 1;
 }
-.story-v2 p {
+.roadmap-v2 p {
   background: var(--accent-color);
   color: #fff;
   font-size: 1.5rem;
@@ -645,7 +645,7 @@ section {
   padding-bottom: 3rem;
 }
 
-.roadmap ul li i:before, .faq ul li i:after, .faq p {
+.roadmap ul li i:before, .roadmap ul li i:after, .roadmap p {
   transition: all 0.25s ease-in-out;
 }
 
