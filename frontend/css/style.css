@@ -8,11 +8,11 @@
   --font-primary: 'Carter One', cursive;
   --font-secondary: 'Raleway', sans-serif;
   --font-code: 'Prompt', sans-serif;
-  --bg-color: #001844;
+  --bg-color: #15449b;
   --bg-color-transparent: #6b89be80;
   --font-color: #ffffff;
   --btn-bg-color: #ffffff;
-  --accent-color: #6d6db4;
+  --accent-color: #79adfc;
   --header-shadow: var(--accent-color) 0px 0px 5px;
   --card-shadow: var(--accent-color) 0px 0px 20px;
 }
