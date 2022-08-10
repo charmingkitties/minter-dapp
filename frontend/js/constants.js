@@ -3,7 +3,7 @@ const chain = 'ethereum'; // rinkeby, polygon, or ethereum
 
 const welcome_h1 = "Welcome To The Blissy Kitties NFT dApp!";
 const welcome_h2 = "Connect to MetaMask to Get Started 🦊";
-const welcome_p = 'Hey, come along with us into this aMEOWzing adventure. Here you can mint the cutest, coolest and most charismatic cats from the streets to your wallet on ETH blockchain.';
+const welcome_p = 'Welcome to the Blissy Kitties, a NFT Project that brings the cutest, coolest and most charismatic cats to the Metaverse.  More than normal kitties, these meowy friends are very special and spread love wherever they go. Together, they make up a unique NFT Collection that lives in the ETH blockchain and each kitty is one-of-a-kind and they cannot be replicated or destroyed.';
 const h1_presale_coming_soon = "..";
 const h1_presale_mint = "..";
 const h1_public_mint = "Public Minting Open!🐈";
