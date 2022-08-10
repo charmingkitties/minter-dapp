@@ -611,29 +611,29 @@ section {
   }
 }
 
-/* TEAM */
+/* STORY */
 
-.team {
+.story {
   background: var(--accent-color);
   text-align: center;
   padding: 3rem 0;
 }
-.team h1 {
+.story h1 {
   color: var(--bg-color);
   text-shadow: 2px 2px 0 var(--font-color);
   font-style: italic;
   margin: 2rem 0;
   font-size: 3.5rem;
 }
-.team h2 {
+.story h2 {
   color: var(--bg-color);
   margin-top: 2rem;
   font-size: 2rem;
 }
-.team .row {
+.story .row {
   display: flex;
 }
-.team .row img {
+.story .row img {
   width: 55%;
   padding: 0 2rem;
 }
@@ -880,30 +880,30 @@ footer {
   h2 {
     font-size: 1.0rem;
   }
-  .team {
+  .story {
     padding: 2rem 0;
   }
-  .team h1 {
+  .story h1 {
     font-size: 1.5rem;
   }
-  .team .row {
+  .story .row {
     flex-direction: column;
     gap: 2rem;
   }
-  .team h2 {
+  .story h2 {
     color: var(--bg-color);
     margin-top: 1rem;
     margin-bottom: 1rem;
     font-size: 1.0rem;
   }
-  .faq h1 {
+  .roadmap h1 {
     font-size: 1.5rem;
   }
-  .faq h2 {
+  .roadmap h2 {
     width: 90%;
     font-size: 1.2rem;
   }
-  .faq p {
+  .roadmap p {
     font-size: 1rem;
   }
 }
