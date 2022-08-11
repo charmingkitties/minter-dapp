@@ -8,7 +8,7 @@
   --font-primary: 'Carter One', cursive;
   --font-secondary: 'Raleway', sans-serif;
   --font-code: 'Prompt', sans-serif;
-  --bg-color: #15449b;
+  --bg-color: #00163f;
   --bg-color-transparent: #6b89be80;
   --font-color: #ffffff;
   --btn-bg-color: #ffffff;
@@ -164,7 +164,7 @@ a.codestackr-link {
   border-radius: 5px;
   border: 3px solid var(--accent-color);
   box-shadow: var(--card-shadow);
-  padding: 5rem;
+  padding: 2rem;
   margin-bottom: 2rem;
   opacity: 0;
   transform: translateX(100vw);
