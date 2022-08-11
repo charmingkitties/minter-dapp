@@ -34,15 +34,30 @@ window.addEventListener("DOMContentLoaded", async () => {
   const splide = new Splide(".splide", {
     type: "loop",
     arrows: false,
-    perMove: 3,
+    perMove: 1,
     pagination: false,
     autoplay: true,
     direction: 'ttb',
-    height: "calc(100vh - 90px)",
-    width: '30vw',
+    height: "75%",
+    width: '25vw',
     autoHeight: true,
   });
   splide.mount();
+
+   //const splideTwo = new Splide(".splide-2", {
+  //  type: "loop",
+  //  arrows: false,
+  //  perMove: 3,
+  //  pagination: false,
+  //  autoplay: true,
+  //  perPage: 5,
+  //  breakpoints: {
+  //    768: {
+  //      perPage: 3,
+  //    },
+  //  },
+  //});
+  //splideTwo.mount();
 
   updateConnectStatus();
   if (MetaMaskOnboarding.isMetaMaskInstalled()) {
@@ -60,52 +75,58 @@ const updateConnectStatus = async () => {
   const spinner = document.getElementById("spinner");
   if (!MetaMaskOnboarding.isMetaMaskInstalled()) {
     onboardButton.innerText = "Install MetaMask!";
+    // HIDE SPINNER
+    spinner.classList.add("hidden");
+    notConnected.classList.remove("hidden");
+    notConnected.classList.add("show-not-connected");
     onboardButton.onclick = () => {
       onboardButton.innerText = "Connecting...";
       onboardButton.disabled = true;
       onboarding.startOnboarding();
-      // HIDE SPINNER
-      spinner.classList.add('hidden');
-      notConnected.classList.remove('hidden');
-      notConnected.classList.add('show-not-connected');
     };
   } else if (accounts && accounts.length > 0) {
     onboardButton.innerText = `✔ ...${accounts[0].slice(-4)}`;
     window.address = accounts[0];
     onboardButton.disabled = true;
     onboarding.stopOnboarding();
-    notConnected.classList.remove('show-not-connected');
-    notConnected.classList.add('hidden');
-    // SHOW SPINNER
-    spinner.classList.remove('hidden');
-    window.contract = new web3.eth.Contract(abi, contractAddress);
-    loadInfo();
-  } else {
-    onboardButton.innerText = "Connect MetaMask!";
-    // HIDE SPINNER
-    spinner.classList.add('hidden');
-    notConnected.classList.remove('hidden');
-    notConnected.classList.add('show-not-connected');
-    onboardButton.onclick = async () => {
-      await window.ethereum
-        .request({
-          method: "eth_requestAccounts",
-        })
-        .then(function (accts) {
-          onboardButton.innerText = `✔ ...${accts[0].slice(-4)}`;
-          notConnected.classList.remove('show-not-connected');
-          notConnected.classList.add('hidden');
-          // SHOW SPINNER
-          spinner.classList.remove('hidden');
-          onboardButton.disabled = true;
-          window.address = accts[0];
-          accounts = accts;
-          window.contract = new web3.eth.Contract(abi, contractAddress);
-          loadInfo();
-        });
+    notConnected.classList.remove("show-not-connected");
+    notConnected.classList.add("hidden");
+        // SHOW SPINNER
+        spinner.classList.remove("hidden");
+        window.contract = new web3.eth.Contract(abi, contractAddress);
+        loadInfo();
+        // spinner.classList.add('hidden'); // remove later
+        // notConnected.classList.remove('hidden'); // remove later
+        // notConnected.classList.add('show-not-connected'); // remove later
+      } else {
+        onboardButton.innerText = "Connect MetaMask!";
+        // HIDE SPINNER
+        spinner.classList.add("hidden");
+        notConnected.classList.remove("hidden");
+        notConnected.classList.add("show-not-connected");
+        onboardButton.onclick = async () => {
+          await window.ethereum
+            .request({
+              method: "eth_requestAccounts",
+            })
+            .then(function (accts) {
+              onboardButton.innerText = `✔ ...${accts[0].slice(-4)}`;
+              notConnected.classList.remove("show-not-connected");
+              notConnected.classList.add("hidden");
+              // SHOW SPINNER
+              spinner.classList.remove("hidden");
+              onboardButton.disabled = true;
+              window.address = accts[0];
+              accounts = accts;
+              window.contract = new web3.eth.Contract(abi, contractAddress);
+              loadInfo();
+              // spinner.classList.add('hidden'); // remove later
+              // notConnected.classList.remove('hidden'); // remove later
+              // notConnected.classList.add('show-not-connected'); // remove later
+            });
+        };
+      }
     };
-  }
-};
 
 async function checkChain() {
   let chainId = 0;
