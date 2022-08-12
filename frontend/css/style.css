@@ -615,8 +615,8 @@ section {
 
 .story {
   background: var(--accent-color);
-  text-align: center;
-  padding: 3rem 0;
+  text-align: right, justify;
+  padding: 1rem 0;
 }
 .story h1 {
   color: var(--bg-color);
