@@ -616,11 +616,12 @@ section {
 .story {
   background: var(--accent-color);
   text-align: right, justify;
-  padding: 1rem 0;
+  padding: 0rem 0;
 }
 .story h1 {
   color: var(--bg-color);
   text-shadow: 2px 2px 0 var(--font-color);
+  font-family: var(--font-secondary);
   font-style: italic;
   margin: 2rem 0;
   font-size: 3.5rem;
@@ -671,7 +672,7 @@ section {
   overflow: hidden;
   opacity: 1;
   transform: translate( 0 , 0 );
-  margin-top: 1rem;
+  margin-top: 0rem;
   max-height: 800px;
   z-index: 2;
 }
