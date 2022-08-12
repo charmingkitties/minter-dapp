@@ -81,13 +81,13 @@ const updateConnectStatus = async () => {
     notConnected.classList.add("show-not-connected");
     onboardButton.onclick = () => {
       onboardButton.innerText = "Connecting...";
-      onboardButton.disabled = true;
+      onboardButton.enabled = true;
       onboarding.startOnboarding();
     };
   } else if (accounts && accounts.length > 0) {
     onboardButton.innerText = `✔ ...${accounts[0].slice(-4)}`;
     window.address = accounts[0];
-    onboardButton.disabled = true;
+    onboardButton.enabled = true;
     onboarding.stopOnboarding();
     notConnected.classList.remove("show-not-connected");
     notConnected.classList.add("hidden");
