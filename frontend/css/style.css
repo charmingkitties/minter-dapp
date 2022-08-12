@@ -616,7 +616,7 @@ section {
 .story {
   background: var(--accent-color);
   font-family: var(--font-secondary);
-  text-align: right;
+  text-align: center;
   padding: 0rem 0;
 }
 .story h1 {
