@@ -621,7 +621,6 @@ section {
 .story h1 {
   color: var(--bg-color);
   text-shadow: 2px 2px 0 var(--font-color);
-  font-family: var(--font-secondary);
   font-style: italic;
   margin: 2rem 0;
   font-size: 3.5rem;
@@ -630,6 +629,7 @@ section {
   color: var(--bg-color);
   margin-top: 2rem;
   font-size: 2rem;
+  font-family: var(--font-secondary);
 }
 .story .row {
   display: flex;
