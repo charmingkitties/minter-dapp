@@ -81,13 +81,13 @@ const updateConnectStatus = async () => {
     notConnected.classList.add("show-not-connected");
     onboardButton.onclick = () => {
       onboardButton.innerText = "Connecting...";
-      onboardButton.enabled = true;
+      onboardButton.disabled = true;
       onboarding.startOnboarding();
     };
   } else if (accounts && accounts.length > 0) {
     onboardButton.innerText = `✔ ...${accounts[0].slice(-4)}`;
     window.address = accounts[0];
-    onboardButton.enabled = true;
+    onboardButton.disabled = true;
     onboarding.stopOnboarding();
     notConnected.classList.remove("show-not-connected");
     notConnected.classList.add("hidden");
@@ -115,7 +115,7 @@ const updateConnectStatus = async () => {
               notConnected.classList.add("hidden");
               // SHOW SPINNER
               spinner.classList.remove("hidden");
-              onboardButton.disabled = true;
+              onboardButton.enabled = true;
               window.address = accts[0];
               accounts = accts;
               window.contract = new web3.eth.Contract(abi, contractAddress);
