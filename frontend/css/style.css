@@ -615,7 +615,7 @@ section {
 
 .story {
   background: var(--accent-color);
-  text-align: right, justify;
+  text-align: right;
   padding: 0rem 0;
 }
 .story h1 {
@@ -628,8 +628,9 @@ section {
 .story h2 {
   color: var(--bg-color);
   margin-top: 2rem;
-  font-size: 2rem;
   font-family: var(--font-secondary);
+  font-size: 2rem;
+
 }
 .story .row {
   display: flex;
