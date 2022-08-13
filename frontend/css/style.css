@@ -744,6 +744,7 @@ section {
 .behind the project {
   background: var(--accent-color);
   text-align: center;
+  font-family: var(--font-secondary);
   padding: 3rem 0;
 }
 .behind the project h1 {
